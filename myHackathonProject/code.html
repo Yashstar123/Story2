@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- search menu bar icon and w3schools will get you this link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Below link is for a font-family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="mystyle.css">
+  <title>Sasta Luiv Vuitton</title>
+  <style>
+    /* Note hovering stuff while using console will come on clicking the page only */
+    * {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: monterrat;
+    }
+
+    nav {
+      /* background-color: white; */
+      position: fixed;
+      height: 80px;
+      width: 100%;
+      /* If you don't do this z-index:4 then opacity in below image will remove this nav */
+      z-index: 4;
+    }
+
+    nav::before {
+      /* Did to create a transparent navbar over an image */
+      content: "";
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      top: 0px;
+    }
+
+    nav:hover a {
+      color: black;
+
+    }
+
+    nav:hover label.logo {
+      color: black;
+    }
+
+    nav:hover .checkbtn {
+      color: black;
+    }
+
+    /* not working as nav:hover a,label.logo or nav:hove a label.logo */
+
+    nav:hover {
+      background-color: white;
+      transition: 0.8s;
+    }
+
+
+
+    label.logo {
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+
+    /* Main reason for floating at right of the content */
+    nav ul {
+      float: right;
+      margin-right: 20px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0px 5px;
+    }
+
+    nav ul li a {
+      font-family: 'Aboreto', cursive;
+      color: white;
+      font-size: 17px;
+      text-transform: uppercase;
+      padding: 7px 13px;
+
+      border-radius: 3px;
+
+      /* Essential along with position absolute in ::after for making underline */
+      display: inline-block;
+      position: relative;
+
+    }
+
+
+    /* This is to make animated underline */
+    nav ul li a::after {
+      
+      content: "";
+      position: absolute;
+      background-color: black;
+      height: 3px;
+      width: 0px;
+      left: 0px;
+      bottom: 30px;
+      transition: width 0.25s ease-out;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+
+
+    .checkbtn {
+      font-size: 30px;
+      color: white;
+      float: right;
+      display: none;
+      cursor: pointer;
+      line-height: 80px;
+      margin-right: 40px;
+    }
+
+
+    #check {
+      display: none;
+    }
+
+    #image1 {
+      background: url(luiv_vuitton_home.jpeg) no-repeat;
+      background-size: cover;
+      height: calc(100vh - 80px);
+      opacity: 0.9;
+
+    }
+
+    #sectionp1 {
+      color: white;
+      z-index: 4;
+      position: absolute;
+      bottom: 30%;
+      left: 35%;
+      font-size: 30px;
+    }
+
+    #sectionp1:hover {
+      background: white;
+      color: black;
+      transition: 0.5s;
+      border: 20px solid white;
+      border-radius: 23px;
+
+    }
+
+    #image2 {
+      background: url(pexels-evg-kowalievska-1055691.jpg) no-repeat;
+      background-size: cover;
+      height: calc(100vh - 80px);
+      opacity: 0.9;
+
+    }
+
+
+
+    #image3 {
+      background: url(pexels-andrea-piacquadio-845434.jpg) no-repeat;
+      background-size: cover;
+      height: calc(100vh - 80px);
+      opacity: 0.9;
+
+    }
+
+    #image4 {
+      background: url(korie-cull-OmIEij4MhnA-unsplash.jpg) no-repeat;
+      background-size: cover;
+      height: calc(100vh - 80px);
+      /* opacity: 0.9; */
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    @media (max-width:1062px) {
+      label.logo {
+        font-size: 30px;
+        padding-left: 0px 50px;
+      }
+
+      nav ul li a {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width:1001px) {
+      label.logo {
+        font-size: 25px;
+        padding-left: 45px;
+      }
+
+      nav ul li a {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width:846px) {
+      .checkbtn {
+        display: block;
+      }
+
+      ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 1s;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+      }
+
+      nav ul li a {
+        font-size: 21px;
+      }
+
+      /* This is for clicking the button on the top right */
+      /* This is why we are having left = -100% in ul */
+      #check:checked~ul {
+        left: 0px;
+      }
+
+
+      a:hover {
+        background: none;
+        color: blue;
+      }
+
+    }
+
+    @media (max-width: 412px) {
+      label.logo {
+        display: inline;
+        font-size: 20px;
+        width: 15px;
+        padding-right: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars" style="font-size:36px"></i>
+    </label>
+    <label class="logo">LUIV VUITTON</label>
+    <ul class="active">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a class="active" href="#">About</a></li>
+      <li><a class="active" href="#">Services</a></li>
+      <li><a class="active" href="#">Contact</a></li>
+      <li><a class="active" href="#">Feedback</a></li>
+    </ul>
+
+  </nav>
+
+  <section id="image1">
+    <p id="sectionp1">Get exclusive collection of spring blooms</p>
+  </section>
+  <section id="image2"></section>
+  <section id="image3"></section>
+  <section id="image4"></section>
+
+  <footer>
+    <div class="center">
+      Copyright &copy; www.sastaluivvuitton.com. All Services rights reserved
+    </div>
+  </footer>
+
+  
+
+</body>
+
+</html>

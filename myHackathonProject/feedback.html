@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="popup" id="pop">
+        <div class="popup-content">
+      <fieldset>
+      <form>
+        <h2>FEEDBACK FORM</h2>
+        <br />
+        <p>
+          We would love to hear your thoughts, suggestions, concerns or problems
+          with anything so we can improve.
+        </p>
+        <br />
+        <hr class="line"/>
+        <br />
+        <h4>FEEDBACK TYPE</h4>
+        <br />
+        <input type="RADIO" id="COMMENTS" name="radio_b" />
+        <label AS="COMMENTS">COMMENTS</label>
+        <input type="RADIO" id="S" name="radio_b" />
+        <label AS="S">SUGGESTIONS</label>
+        <input type="RADIO" id="Q" name="radio_b" />
+        <label AS="Q">QUESTIONS</label>
+        <br /><br />
+        <label AS="TEXT">DESCRIBE YOUR FEEDBACK</label>
+        <br />
+        <textarea rows="4" cols="50" name="comment"> </textarea>
+        <br /><br /><br />
+      </form>
+      <input type="submit" class="submit" onclick="myFunction()" />
+    </div>
+    </div>
+    </fieldset>
+  <script>
+    function myFunction() {
+      alert("Thank You! for your valuable feedback.");
+    }
+    function toggle(){
+      var blur=document.getElementById("pops");
+      pops.classList.toggle('active');
+      var pop=document.getElementById('pop');
+      pop.classList.toggle('active');
+    }
+    document.getElementById("button").addEventListener("click",function(){
+      document.querySelector(".popup").style.display="flex";    
+    })    
+      document.querySelector(".submit").addEventListener("click",function(){
+        document.querySelector(".popup").style.display="none";
+    })        
+  </script>
+</body>
+</html>
